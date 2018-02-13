@@ -1,0 +1,123 @@
+<?php
+/*
+Template personnalisé pour l'affichage des panneaux sur la page d'accueil
+*/
+?>
+
+<?php  if(isset($content) && $content != ""){print render($content);} ?>
+<?php
+
+echo '<div class="row row-cgf" id ="row-cgf-homepage1" style="margin-top : 40px;">';
+
+<ul>
+        <li><a href="http://
+
+$view = views_get_view('actus_cgf_une');
+$view->set_arguments(array("En ce moment à la une"));
+$view->set_display('panel_accueil');
+$view->pre_execute();
+$view->execute();
+print $view->render();
+
+echo '<h1>Hello World!</h1>';
+
+$view = views_get_view('concours');
+$view->set_arguments(array("Les prochains évènements"));
+$view->set_display('panel_accueil');
+$view->pre_execute();
+$view->execute();
+print $view->render();
+
+//echo '</div>';
+//echo'</div>';
+
+
+
+//echo '<div  class="row row-cgf" id ="row-cgf-homepage2">';
+//echo '<div class="col-sm-6" >';
+$view = views_get_view('actus_formation_cgf');
+$view->set_arguments(array("Les dernières actualités - Formation"));
+$view->set_display('panel_accueil');
+$view->pre_execute();
+$view->execute();
+print $view->render();
+
+//echo '</div>';
+
+//echo '<div class="col-sm-6" >';
+
+$view = views_get_view('actus_statut_cgf');
+$view->set_arguments(array("Les dernières actualités du Statut"));
+$view->set_display('panel_accueil');
+$view->pre_execute();
+$view->execute();
+print $view->render();
+
+
+
+//echo '<div class="col-sm-6">';
+$view = views_get_view('derni_res_offres_de_stage');
+$view->set_arguments(array("Les dernières offres de stage"));
+$view->set_display('panel_accueil');
+$view->pre_execute();
+$view->execute();
+print $view->render();
+//echo '</div>';
+
+//echo '<div class="col-sm-6">';
+$view = views_get_view('actus_concours_cgf');
+$view->set_arguments(array("Les dernières actualités - Concours"));
+$view->set_display('panel_accueil');
+$view->pre_execute();
+$view->execute();
+print $view->render();
+//echo '</div>';
+//echo '</div>';
+
+//echo '<div class="row row-cgf "id ="row-cgf-homepage3">';
+//echo '<div class="col-sm-6" >';
+$view = views_get_view('dernieres_offres_d_emploi');
+$view->set_arguments(array("Les dernières offres d'emploi"));
+$view->set_display('panel_accueil');
+$view->pre_execute();
+$view->execute();
+print $view->render();
+//echo '</div>';
+//echo '<div class="col-sm-6">';
+$view = views_get_view('actus_emplois_cgf');
+$view->set_arguments(array("Les dernières actualités - Emplois"));
+$view->set_display('panel_accueil');
+$view->pre_execute();
+$view->execute();
+print $view->render();
+//echo '</div>';
+//echo '</div>';
+
+//echo '<div  class="row row-cgf" id="row-cgf-homepage4">';
+//echo '<div class="col-sm-4" >';
+$view = views_get_view('vue_catalogue_2014');
+$view->set_display('fond_doc');
+$view->pre_execute();
+$view->execute();
+print $view->render();
+//echo '</div>';
+
+
+//echo '</div>';
+?>
+
+<?php
+/*drupal_add_js('jQuery(".row-cgf-homepage").each(function(){jQuery(".row-cgf-homepage .panel-cgf ").height(jQuery(".row-cgf-homepage").height());alert("oto"); });', 'inline');*/
+?>
+<script>
+    /*jQuery(window).load(function()
+     {
+
+     jQuery(".row-cgf").each(function()
+     {
+     var c="#"+(jQuery(this).attr("id"))+" .panel-cgf";
+     //alert(c);
+     jQuery(c).css({'height' : jQuery(this).height()+'px'});//alert("oto");
+     });
+     });*/
+</script>
