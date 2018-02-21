@@ -39,6 +39,7 @@ $adjoint_email = $rows[1]->users_mail;
 
            
            <div class="email text-left row"><span class="col-sm-2">Email :</span>  <?php echo $directeur_email ?></div>
+           <img class="img-responsive" src="http://concept4u.com/wp-content/uploads/2005/12/email-icon-transparent-background.png" alt="Icône email">
            <div class=" telephone text-left row"><span class="col-sm-2">Tél. :</span>  <?php echo format_directeur_phone($directeur->field_telephone['und'][0]['safe_value']); ?></div>
 
 
